@@ -4,27 +4,32 @@
   <meta charset="UTF-8">
   <title>Ayuron Ayurveda – Premium Herbal Care</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
       background: #f7f6f2;
       color: #2f3e2f;
     }
+
     header {
       background: linear-gradient(135deg, #1f3d2b, #3b6b4f);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
       font-size: 40px;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 18px;
       opacity: 0.9;
     }
+
     .btn {
       display: inline-block;
       margin-top: 25px;
@@ -35,37 +40,44 @@
       font-weight: bold;
       border-radius: 30px;
     }
+
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     .section-title {
       text-align: center;
       font-size: 32px;
       margin-bottom: 40px;
     }
+
     .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      display: flex;
+      justify-content: center;
     }
+
     .card {
       background: white;
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       text-align: center;
+      max-width: 340px;
     }
-    .card h3 {
-      margin-bottom: 10px;
-      color: #1f3d2b;
-    }
-    .products img {
+
+    .card img {
       width: 100%;
       border-radius: 12px;
       margin-bottom: 15px;
     }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #1f3d2b;
+    }
+
     .price {
       font-weight: bold;
       color: #c9a24d;
@@ -73,6 +85,7 @@
       margin-top: 10px;
       display: block;
     }
+
     footer {
       background: #1f3d2b;
       color: white;
@@ -88,7 +101,7 @@
 <header>
   <h1>Ayuron Ayurveda</h1>
   <p>Premium Ayurvedic Products Crafted from Kerala’s Purest Herbs</p>
-  <a class="btn" href="#products">Explore Our Products</a>
+  <a class="btn" href="#products">View Product</a>
 </header>
 
 <section>
@@ -98,40 +111,29 @@
       <h3>100% Natural</h3>
       <p>Pure herbal formulations inspired by ancient Ayurveda.</p>
     </div>
-    <div class="card">
-      <h3>Kerala Origin</h3>
-      <p>Sourced from the biodiversity-rich lands of Kerala.</p>
-    </div>
-    <div class="card">
-      <h3>Export Quality</h3>
-      <p>Manufactured with GMP & AYUSH compliant standards.</p>
-    </div>
   </div>
 </section>
 
-<!-- PRODUCTS SECTION -->
+<!-- PRODUCT SECTION -->
 <section class="products" id="products">
-  <h2 class="section-title">Our Products</h2>
+  <h2 class="section-title">Our Product</h2>
+
   <div class="features">
-
     <div class="card">
-      <h3>Herbal Hair Oil</h3>
-      <p>Strengthens roots, prevents hair fall, and promotes growth.</p>
-      <span class="price">₹499</span>
-    </div>
 
-    <div class="card">
-      <h3>Herbal Shampoo</h3>
-      <p>Gentle cleanser that nourishes scalp and hair naturally.</p>
-      <span class="price">₹349</span>
-    </div>
+      <!-- PRODUCT IMAGE -->
+      <img src="images/Picsart_26-01-28_20-12-21-961.jpg" alt="Moisturizer">
 
-    <div class="card">
-      <h3>Herbal Face Pack</h3>
-      <p>Improves skin glow and removes impurities naturally.</p>
-      <span class="price">₹299</span>
-    </div>
+      <!-- PRODUCT NAME -->
+      <h3>Moisturizer</h3>
 
+      <!-- PRODUCT DESCRIPTION -->
+      <p>Ayurvedic herbal moisturizer for soft, healthy and glowing skin.</p>
+
+      <!-- PRICE -->
+      <span class="price">₹399</span>
+
+    </div>
   </div>
 </section>
 
@@ -140,4 +142,4 @@
 </footer>
 
 </body>
-</html>
+</html> 
