@@ -66,6 +66,13 @@
       border-radius: 12px;
       margin-bottom: 15px;
     }
+    .price {
+      font-weight: bold;
+      color: #c9a24d;
+      font-size: 18px;
+      margin-top: 10px;
+      display: block;
+    }
     footer {
       background: #1f3d2b;
       color: white;
@@ -75,12 +82,13 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Ayuron Ayurveda</h1>
   <p>Premium Ayurvedic Products Crafted from Kerala’s Purest Herbs</p>
-  <a class="btn" href="#">Explore Our Products</a>
+  <a class="btn" href="#products">Explore Our Products</a>
 </header>
 
 <section>
@@ -101,9 +109,35 @@
   </div>
 </section>
 
-<section class="products">
+<!-- PRODUCTS SECTION -->
+<section class="products" id="products">
   <h2 class="section-title">Our Products</h2>
   <div class="features">
+
     <div class="card">
       <h3>Herbal Hair Oil</h3>
-      <p>Strengthens roots, prevents
+      <p>Strengthens roots, prevents hair fall, and promotes growth.</p>
+      <span class="price">₹499</span>
+    </div>
+
+    <div class="card">
+      <h3>Herbal Shampoo</h3>
+      <p>Gentle cleanser that nourishes scalp and hair naturally.</p>
+      <span class="price">₹349</span>
+    </div>
+
+    <div class="card">
+      <h3>Herbal Face Pack</h3>
+      <p>Improves skin glow and removes impurities naturally.</p>
+      <span class="price">₹299</span>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ayuron Ayurveda. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
