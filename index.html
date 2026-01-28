@@ -4,23 +4,36 @@
 <meta charset="UTF-8">
 <title>Ayuron Ayurveda – Premium Herbal Care</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body {
+body{
   margin:0;
-  font-family:Poppins,sans-serif;
+  font-family:Poppins, sans-serif;
   background:#f7f6f2;
   color:#2f3e2f;
 }
-header {
+header{
   background:linear-gradient(135deg,#1f3d2b,#3b6b4f);
   color:#fff;
   padding:80px 20px;
   text-align:center;
 }
-header h1 {font-size:42px;margin-bottom:10px;}
-header p {font-size:18px;max-width:700px;margin:auto;opacity:0.95;}
-.hero-points {margin-top:25px;font-size:16px;opacity:0.9;}
-.btn {
+header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+header p{
+  font-size:18px;
+  max-width:700px;
+  margin:auto;
+  opacity:0.95;
+}
+.hero-points{
+  margin-top:25px;
+  font-size:16px;
+  opacity:0.9;
+}
+.btn{
   display:inline-block;
   margin-top:30px;
   padding:14px 34px;
@@ -30,22 +43,22 @@ header p {font-size:18px;max-width:700px;margin:auto;opacity:0.95;}
   font-weight:bold;
   border-radius:30px;
 }
-section {
+section{
   padding:60px 20px;
   max-width:1100px;
   margin:auto;
 }
-.section-title {
+.section-title{
   text-align:center;
   font-size:32px;
   margin-bottom:40px;
 }
-.features {
+.features{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
 }
-.card {
+.card{
   background:#fff;
   padding:25px;
   border-radius:16px;
@@ -54,11 +67,39 @@ section {
   cursor:pointer;
   transition:0.3s;
 }
-.card:hover {transform:translateY(-6px);}
-.card img {width:100%;border-radius:12px;margin-bottom:15px;}
-.card h3 {margin-bottom:8px;}
-.card .price {font-weight:bold;color:#c9a24d;margin-bottom:12px;}
-footer {
+.card:hover{
+  transform:translateY(-6px);
+}
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+.card h3{
+  margin-bottom:8px;
+}
+.card .price{
+  font-weight:bold;
+  color:#c9a24d;
+  margin-bottom:12px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+table, th, td{
+  border:1px solid #ddd;
+}
+th, td{
+  padding:12px;
+  text-align:left;
+}
+th{
+  background:#c9a24d;
+  color:#1f3d2b;
+}
+footer{
   background:#1f3d2b;
   color:#fff;
   text-align:center;
@@ -70,19 +111,23 @@ footer {
 
 <body>
 
+<!-- HERO / INTRO -->
 <header>
   <h1>Ayuron Ayurveda</h1>
   <p>Authentic Ayurvedic Products from Kerala, crafted with time-tested herbs for natural beauty, wellness, and balance.</p>
+
   <div class="hero-points">
     🌿 100% Natural & Chemical-Free &nbsp;|&nbsp;
     🧘 Traditional Ayurvedic Formulations &nbsp;|&nbsp;
     🇮🇳 Made in Kerala
   </div>
+
   <a class="btn" href="#products">Explore Our Products</a>
 </header>
 
 <section id="products">
 <h2 class="section-title">Our Premium Products</h2>
+
 <div class="features">
 
 <!-- Hair Oil -->
@@ -116,6 +161,32 @@ footer {
 </a>
 
 </div>
+</section>
+
+<section id="ingredients">
+<h2 class="section-title">Key Ingredients</h2>
+<table>
+<tr>
+<th>Product</th>
+<th>Ingredient</th>
+<th>Benefit</th>
+</tr>
+<tr>
+<td>Herbal Hair Oil</td>
+<td>Bhringraj, Amla, Coconut Oil, Neelibhringadi</td>
+<td>Strengthens roots, reduces hair fall, promotes growth</td>
+</tr>
+<tr>
+<td>Face Serum</td>
+<td>Kumkumadi Oil, Aloe Vera, Herbal Extracts</td>
+<td>Glowing skin, deep hydration, improves texture</td>
+</tr>
+<tr>
+<td>Face Moisturizer</td>
+<td>Aloe Vera, Coconut Oil, Almond Oil, Herbal Extracts</td>
+<td>Deep hydration, softens skin, protects natural barrier</td>
+</tr>
+</table>
 </section>
 
 <footer>
