@@ -1,145 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ayuron Ayurveda – Premium Herbal Care</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Ayuron Ayurveda – Premium Herbal Care</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f6f2;
-      color: #2f3e2f;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#f7f6f2;
+  color:#2f3e2f;
+}
+header{
+  background:linear-gradient(135deg,#1f3d2b,#3b6b4f);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+header h1{font-size:40px;}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 30px;
+  background:#c9a24d;
+  color:#1f3d2b;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:30px;
+}
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+}
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
+}
 
-    header {
-      background: linear-gradient(135deg, #1f3d2b, #3b6b4f);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #c9a24d;
-      color: #1f3d2b;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
-
-    .features {
-      display: flex;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: center;
-      max-width: 340px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #1f3d2b;
-    }
-
-    .price {
-      font-weight: bold;
-      color: #c9a24d;
-      font-size: 18px;
-      margin-top: 10px;
-      display: block;
-    }
-
-    footer {
-      background: #1f3d2b;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-    }
-  </style>
+/* POPUP */
+.popup{
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+.popup-content{
+  background:#fff;
+  max-width:400px;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+.close{
+  cursor:pointer;
+  color:#c00;
+  font-weight:bold;
+}
+footer{
+  background:#1f3d2b;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Ayuron Ayurveda</h1>
-  <p>Premium Ayurvedic Products Crafted from Kerala’s Purest Herbs</p>
-  <a class="btn" href="#products">View Product</a>
+<h1>Ayuron Ayurveda</h1>
+<p>Premium Ayurvedic Products Crafted from Kerala’s Purest Herbs</p>
+<a class="btn" href="#products">Explore Our Products</a>
 </header>
 
-<section>
-  <h2 class="section-title">Why Ayuron?</h2>
-  <div class="features">
-    <div class="card">
-      <h3>100% Natural</h3>
-      <p>Pure herbal formulations inspired by ancient Ayurveda.</p>
-    </div>
-  </div>
+<section id="products">
+<h2 class="section-title">Our Products</h2>
+
+<div class="features">
+
+<!-- Hair Oil -->
+<div class="card" onclick="openPopup('hair')">
+  <img src="hairoil_26-01-28_20-52-15-925.jpg">
+  <h3>Herbal Hair Oil</h3>
+  <p>Strong roots & healthy hair</p>
+</div>
+
+<!-- Face Serum -->
+<div class="card" onclick="openPopup('serum')">
+  <img src="Faceserum_26-01-28_20-56-36-762.jpg">
+  <h3>Ayurvedic Face Serum</h3>
+  <p>Glow & deep nourishment</p>
+</div>
+
+<!-- Wellness Product -->
+<div class="card" onclick="openPopup('wellness')">
+  <img src="Picsart_26-01-28_20-12-21-961.jpg">
+  <h3>Wellness Oil</h3>
+  <p>Relaxation & pain relief</p>
+</div>
+
+</div>
 </section>
 
-<!-- PRODUCT SECTION -->
-<section class="products" id="products">
-  <h2 class="section-title">Our Product</h2>
+<!-- POPUPS -->
 
-  <div class="features">
-    <div class="card">
-
-      <!-- PRODUCT IMAGE -->
-      <img src="images/Picsart_26-01-28_20-12-21-961.jpg" alt="Moisturizer">
-
-      <!-- PRODUCT NAME -->
-      <h3>Moisturizer</h3>
-
-      <!-- PRODUCT DESCRIPTION -->
-      <p>Ayurvedic herbal moisturizer for soft, healthy and glowing skin.</p>
-
-      <!-- PRICE -->
-      <span class="price">₹399</span>
-
-    </div>
+<div class="popup" id="hair">
+  <div class="popup-content">
+    <p class="close" onclick="closePopup('hair')">X</p>
+    <h3>Herbal Hair Oil</h3>
+    <p>Reduces hair fall, strengthens roots, promotes natural hair growth using pure Ayurvedic herbs.</p>
   </div>
-</section>
+</div>
+
+<div class="popup" id="serum">
+  <div class="popup-content">
+    <p class="close" onclick="closePopup('serum')">X</p>
+    <h3>Ayurvedic Face Serum</h3>
+    <p>Deep hydration, glowing skin, and herbal nourishment without chemicals.</p>
+  </div>
+</div>
+
+<div class="popup" id="wellness">
+  <div class="popup-content">
+    <p class="close" onclick="closePopup('wellness')">X</p>
+    <h3>Wellness Oil</h3>
+    <p>Relieves stress, body pain, and improves circulation naturally.</p>
+  </div>
+</div>
 
 <footer>
-  <p>© 2026 Ayuron Ayurveda. All Rights Reserved.</p>
+© 2026 Ayuron Ayurveda. All Rights Reserved.
 </footer>
 
+<script>
+function openPopup(id){
+  document.getElementById(id).style.display="flex";
+}
+function closePopup(id){
+  document.getElementById(id).style.display="none";
+}
+</script>
+
 </body>
-</html> 
+  </html> 
