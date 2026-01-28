@@ -15,14 +15,20 @@ body{
 header{
   background:linear-gradient(135deg,#1f3d2b,#3b6b4f);
   color:#fff;
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
 }
-header h1{font-size:40px;}
+header h1{font-size:42px;margin-bottom:10px;}
+header p{font-size:18px;max-width:700px;margin:auto;opacity:0.95;}
+.hero-points{
+  margin-top:25px;
+  font-size:16px;
+  opacity:0.9;
+}
 .btn{
   display:inline-block;
-  margin-top:25px;
-  padding:14px 30px;
+  margin-top:30px;
+  padding:14px 34px;
   background:#c9a24d;
   color:#1f3d2b;
   text-decoration:none;
@@ -53,7 +59,7 @@ section{
   cursor:pointer;
   transition:0.3s;
 }
-.card:hover{transform:translateY(-5px);}
+.card:hover{transform:translateY(-6px);}
 .card img{
   width:100%;
   border-radius:12px;
@@ -69,58 +75,74 @@ section{
   background:rgba(0,0,0,0.6);
   justify-content:center;
   align-items:center;
+  z-index:999;
 }
 .popup-content{
   background:#fff;
-  max-width:400px;
+  max-width:420px;
   padding:30px;
   border-radius:20px;
   text-align:center;
+}
+.popup-content img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:15px;
 }
 .close{
   cursor:pointer;
   color:#c00;
   font-weight:bold;
+  float:right;
 }
 footer{
   background:#1f3d2b;
   color:#fff;
   text-align:center;
   padding:25px;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO / INTRO -->
 <header>
-<h1>Ayuron Ayurveda</h1>
-<p>Premium Ayurvedic Products Crafted from Kerala’s Purest Herbs</p>
-<a class="btn" href="#products">Explore Our Products</a>
+  <h1>Ayuron Ayurveda</h1>
+  <p>Authentic Ayurvedic Products from Kerala, crafted with time-tested herbs for natural beauty, wellness, and balance.</p>
+
+  <div class="hero-points">
+    🌿 100% Natural & Chemical-Free &nbsp;|&nbsp;
+    🧘 Traditional Ayurvedic Formulations &nbsp;|&nbsp;
+    🇮🇳 Made in Kerala
+  </div>
+
+  <a class="btn" href="#products">Explore Our Products</a>
 </header>
 
 <section id="products">
-<h2 class="section-title">Our Products</h2>
+<h2 class="section-title">Our Premium Products</h2>
 
 <div class="features">
 
 <!-- Hair Oil -->
 <div class="card" onclick="openPopup('hair')">
-  <img src="hairoil_26-01-28_20-52-15-925.jpg">
+  <img src="images/hairoil_26-01-28_20-52-15-925.jpg" alt="Herbal Hair Oil">
   <h3>Herbal Hair Oil</h3>
   <p>Strong roots & healthy hair</p>
 </div>
 
 <!-- Face Serum -->
 <div class="card" onclick="openPopup('serum')">
-  <img src="Faceserum_26-01-28_20-56-36-762.jpg">
+  <img src="images/Faceserum_26-01-28_20-56-36-762.jpg" alt="Ayurvedic Face Serum">
   <h3>Ayurvedic Face Serum</h3>
   <p>Glow & deep nourishment</p>
 </div>
 
-<!-- Wellness Product -->
+<!-- Wellness Oil -->
 <div class="card" onclick="openPopup('wellness')">
-  <img src="Picsart_26-01-28_20-12-21-961.jpg">
+  <img src="images/Picsart_26-01-28_20-12-21-961.jpg" alt="Wellness Oil">
   <h3>Wellness Oil</h3>
   <p>Relaxation & pain relief</p>
 </div>
@@ -132,30 +154,33 @@ footer{
 
 <div class="popup" id="hair">
   <div class="popup-content">
-    <p class="close" onclick="closePopup('hair')">X</p>
+    <span class="close" onclick="closePopup('hair')">X</span>
+    <img src="images/hairoil_26-01-28_20-52-15-925.jpg">
     <h3>Herbal Hair Oil</h3>
-    <p>Reduces hair fall, strengthens roots, promotes natural hair growth using pure Ayurvedic herbs.</p>
+    <p>Reduces hair fall, strengthens roots, and promotes natural hair growth using traditional Ayurvedic herbs.</p>
   </div>
 </div>
 
 <div class="popup" id="serum">
   <div class="popup-content">
-    <p class="close" onclick="closePopup('serum')">X</p>
+    <span class="close" onclick="closePopup('serum')">X</span>
+    <img src="images/Faceserum_26-01-28_20-56-36-762.jpg">
     <h3>Ayurvedic Face Serum</h3>
-    <p>Deep hydration, glowing skin, and herbal nourishment without chemicals.</p>
+    <p>Deep hydration, radiant glow, and herbal nourishment without harmful chemicals.</p>
   </div>
 </div>
 
 <div class="popup" id="wellness">
   <div class="popup-content">
-    <p class="close" onclick="closePopup('wellness')">X</p>
+    <span class="close" onclick="closePopup('wellness')">X</span>
+    <img src="images/Picsart_26-01-28_20-12-21-961.jpg">
     <h3>Wellness Oil</h3>
-    <p>Relieves stress, body pain, and improves circulation naturally.</p>
+    <p>Relieves stress, body pain, and improves blood circulation naturally.</p>
   </div>
 </div>
 
 <footer>
-© 2026 Ayuron Ayurveda. All Rights Reserved.
+© 2026 Ayuron Ayurveda. Crafted with Nature 🌿
 </footer>
 
 <script>
